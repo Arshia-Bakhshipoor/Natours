@@ -1,0 +1,40 @@
+.center-box {
+  max-width: $grid-width;
+  margin: 0 auto;
+}
+.row {
+  max-width: $grid-width;
+  margin: 0 auto;
+  // background-color: #eee;
+  display: grid;
+  gap: $gutter-horizontal;
+  &:not(:last-child) {
+    margin-bottom: $gutter-vertical;
+  }
+
+  &.grid--2-cols {
+    grid-template-columns: 1fr 1fr;
+  }
+  &.grid--4-cols {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  &.grid--3-cols {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  &.grid--2-of-3 {
+    grid-template-columns: 1fr 2fr;
+  }
+  &.grid--2-of-4 {
+    grid-template-columns: 1fr 1fr 2fr;
+  }
+  &.grid--3-of-4 {
+    grid-template-columns: 1fr 3fr;
+  }
+}
+// [class^="col"] {
+//   background-color: aqua;
+// }
+// .row div {
+//   background-color: aqua; LINE UP IS THIS ACTUALY^^
+// }
